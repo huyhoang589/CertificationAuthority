@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{719B86B3-551F-44B7-ACE0-79314159FD6C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CA</RootNamespace>
+    <AssemblyName>CA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>network_ser.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form_CAConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_CAConnect.Designer.cs">
+      <DependentUpon>form_CAConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_CRLConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_CRLConfirm.Designer.cs">
+      <DependentUpon>form_CRLConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_DeleteConfim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_DeleteConfim.Designer.cs">
+      <DependentUpon>form_DeleteConfim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_GenerateKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_GenerateKey.Designer.cs">
+      <DependentUpon>form_GenerateKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_ImportCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_ImportCert.Designer.cs">
+      <DependentUpon>form_ImportCert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_IssueRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_IssueRequest.Designer.cs">
+      <DependentUpon>form_IssueRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_IssueRequestConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_IssueRequestConfirm.Designer.cs">
+      <DependentUpon>form_IssueRequestConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_mainCA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_mainCA.Designer.cs">
+      <DependentUpon>form_mainCA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_RefreshCRL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_RefreshCRL.Designer.cs">
+      <DependentUpon>form_RefreshCRL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_RevokeReason.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_RevokeReason.Designer.cs">
+      <DependentUpon>form_RevokeReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="form_CreateCerts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_CreateCerts.Designer.cs">
+      <DependentUpon>form_CreateCerts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form_RevokeConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_RevokeConfirm.Designer.cs">
+      <DependentUpon>form_RevokeConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="X509 Certificate\Certificate\1-TBSCerificateGenerator.cs" />
+    <Compile Include="X509 Certificate\Certificate\2-AlgorithmSignCert.cs" />
+    <Compile Include="X509 Certificate\Certificate\3-SignValure.cs" />
+    <Compile Include="X509 Certificate\Certificate\X509V3CertificateGenerator.cs" />
+    <Compile Include="X509 Certificate\CRL\CertificatesRevocationList.cs" />
+    <Compile Include="X509 Certificate\CRL\tbsCRLGenerator.cs" />
+    <Compile Include="X509 Certificate\ECGOST2012\DSGOST2012.cs" />
+    <Compile Include="X509 Certificate\ECGOST2012\ECParamSet.cs" />
+    <Compile Include="X509 Certificate\ECGOST2012\HGOST2012.cs" />
+    <Compile Include="X509 Certificate\Math\BigIntegerClass.cs" />
+    <Compile Include="X509 Certificate\Math\ECPointClass.cs" />
+    <Compile Include="X509 Certificate\Utilities\ByteArrayList.cs" />
+    <Compile Include="X509 Certificate\Utilities\CheckObjID.cs" />
+    <Compile Include="X509 Certificate\Utilities\getSubjectInfo.cs" />
+    <Compile Include="X509 Certificate\Utilities\KeyPairGenerator.cs" />
+    <Compile Include="X509 Certificate\Utilities\MakeOidStringFromBytes.cs" />
+    <Compile Include="X509 Certificate\Utilities\ObjectsId.cs" />
+    <Compile Include="X509 Certificate\Utilities\Signer.cs" />
+    <Compile Include="X509 Certificate\Utilities\StringToByteArray.cs" />
+    <Compile Include="X509 Certificate\X509\1-Version.cs" />
+    <Compile Include="X509 Certificate\X509\2-Serial.cs" />
+    <Compile Include="X509 Certificate\X509\3-AlgorithmSignature.cs" />
+    <Compile Include="X509 Certificate\X509\4-Issuer.cs" />
+    <Compile Include="X509 Certificate\X509\5-UTCTime.cs" />
+    <Compile Include="X509 Certificate\X509\6-Subject.cs" />
+    <Compile Include="X509 Certificate\X509\7-KeyGost.cs" />
+    <Compile Include="X509 Certificate\X509\8-V3Extended.cs" />
+    <Compile Include="X509 Certificate\X509\9-CLRExtended.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\CRLExt\CAKeyCertIndexPair.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\CRLExt\CRLauID.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\CRLExt\CRLNextPublish.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\CRLExt\CRLNumber.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Ext\authorityInfoAccess.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Ext\authorityKeyId.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Ext\basicConstraints.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Ext\cRLPoint.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Ext\KeyUsage.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Ext\SubjectKeyId.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Name\commonName.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Name\countryName.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Name\emailAdress.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Name\localName.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Name\organizationName.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Name\organizationUnitName.cs" />
+    <Compile Include="X509 Certificate\X509\X509Obj\X509Name\StateOfProvince.cs" />
+    <EmbeddedResource Include="form_CAConnect.resx">
+      <DependentUpon>form_CAConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_CRLConfirm.resx">
+      <DependentUpon>form_CRLConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_DeleteConfim.resx">
+      <DependentUpon>form_DeleteConfim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_GenerateKey.resx">
+      <DependentUpon>form_GenerateKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_ImportCert.resx">
+      <DependentUpon>form_ImportCert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_IssueRequest.resx">
+      <DependentUpon>form_IssueRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_IssueRequestConfirm.resx">
+      <DependentUpon>form_IssueRequestConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_mainCA.resx">
+      <DependentUpon>form_mainCA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_RefreshCRL.resx">
+      <DependentUpon>form_RefreshCRL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_RevokeReason.resx">
+      <DependentUpon>form_RevokeReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="form_CreateCerts.resx">
+      <DependentUpon>form_CreateCerts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_RevokeConfirm.resx">
+      <DependentUpon>form_RevokeConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="network_ser.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
